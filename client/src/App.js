@@ -18,7 +18,21 @@ class Card {
       }
     }
   }
+  // Shuffle the deck up
+  shuffle() {
+    for (let i = 52 - 1; i > 0; i--) {
+      let index = Math.floor(Math.random() * i);
+      var temp = this.deck[index];
+      this.deck[index] = this.deck[i];
+      this.deck[i] = temp;
+    }
+  }
 
+  show() {
+    for (var i = 0; i < 52; i++) {
+      console.log(this.deck[i]);
+    }
+  }
 };
 class App extends Component {
 
