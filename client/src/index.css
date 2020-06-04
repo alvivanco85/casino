@@ -45,8 +45,28 @@ code {
   .buttons {
     padding-top: 70px;
     display: flex;
+    flex-direction: row;
     justify-content: center;
   }
+  .primary {
+    margin-left: 5em;
+    width: 10em;
+    height: 3em;
+  }
+
+  .danger {
+    margin-left: 5em;
+    width: 10em;
+    height: 3em;
+  }
+
+  .success {
+    margin-left: 5em;
+    width: 10em;
+    height: 3em;
+  }
+
+  
 
   .Bet{
     border-radius: 10px;
