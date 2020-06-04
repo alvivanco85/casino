@@ -1,47 +1,88 @@
-/* eslint-disable react/prefer-stateless-function */
-import React, { Component } from "react";
-import Index from "./components/Index";
-import "./App.css";
-class Card {
-  constructor() {
-    this.deck = [];
-    this.cardNumber = 1;
-    this.cardSymbol = 0;
-    this.card = 0;
-    this.symb = 0;
-    // Creating a deck of card
-    for (this.card = 1; this.card <= 13; this.card++) {
-      for (this.symb = 0; this.symb < 4; this.symb++) {
-        var temp = this.card + "." + this.symb;
-        this.deck.push(temp);
-        console.log("card :" + this.card + ", symb :" + this.symb);
+import React from 'react';
+import {BrowserRouter as Router, Route, Link} from "react-router-dom";
+import Container from "react-bootstrap/Container";
+import Navbar from 'react-bootstrap/Navbar';
+import Nav from 'react-bootstrap/Nav';
+import './App.css';
+
+import HomePage from './Pages/HomePage';
+import LoginPage from './Pages/LoginPage';
+import SignupPage from './Pages/SignupPage';
+import PlayPage from './Pages/PlayPage';
+import LeaderboardsPage from './Pages/LeaderboardsPage';
+import RulesPage from './Pages/RulesPage';
+
+import Footer from './Components/Footer/Footer';
+
+
+class App extends React.Component {
+
+  constructor(props) {
+    super(props);
+    this.state ={
+      title: "Black Jack",
+      headerLinks: [
+        {title: "Home", path: "/"},
+        {title: "Login", path: "/login"},
+        {title: "Play", path: "/play"},
+        {title: "Leaderboards", path: "/leaderboards"},
+        {title: "Rules", path: "/rules"}
+      ],
+      home: {
+        title: "Black-Jack",
+        text: "Click on Image!"
+      },
+      login: {
+        title: "Please login or Sign Up."
+      },
+      signup: {
+        title: "Please create an account."
+      },
+      play: {
+        title: "Place Bet to start"
+      },
+      leaderboards: {
+        title: "Player Highscores"
+      },
+      rules: {
+        title: "How to Play"
       }
     }
   }
-  // Shuffle the deck up
-  shuffle() {
-    for (let i = 52 - 1; i > 0; i--) {
-      let index = Math.floor(Math.random() * i);
-      var temp = this.deck[index];
-      this.deck[index] = this.deck[i];
-      this.deck[i] = temp;
-    }
-  }
-
-  show() {
-    for (var i = 0; i < 52; i++) {
-      console.log(this.deck[i]);
-    }
-  }
-};
-class App extends Component {
 
   render() {
-    // Black Jack
-    var deck = new Card();
-    deck.shuffle();
-    deck.show();
-    return <Index />;
+    return (
+      <Router>
+        <Container className="p-0"  fluid={true}>
+
+          <Navbar className="Navbar border-bottom" expand="lg">
+            <Navbar.Brand>Welcome!</Navbar.Brand>
+
+            <Navbar.Toggle className="border-0" aria-controls="navbar-toggle"/>
+            <Navbar.Collapse id="navbar-toggle">
+            <Nav className="ml-auto">
+              <Link className="nav-link" style={{color:"black"}} to="/">Home</Link>
+              <Link className="nav-link" style={{color:"black"}} to="/play">Play</Link>
+              <Link className="nav-link" style={{color:"black"}} to="/login">Login</Link>
+              <Link className="nav-link" style={{color:"black"}} to="/signup">Sign Up</Link>
+              <Link className="nav-link" style={{color:"black"}} to="/leaderboards">Leaderboards</Link>
+              <Link className="nav-link" style={{color:"black"}} to="/rules">Rules</Link>
+            </Nav>
+            </Navbar.Collapse>
+          </Navbar>
+  
+          <Route path="/" exact render={() => <HomePage title={this.state.home.title} subTitle={this.state.home.subTitle} text={this.state.home.text} />} />
+          <Route path="/login"  render={() => <LoginPage title={this.state.login.title} />} />
+          <Route path="/signup"  render={() => <SignupPage title={this.state.signup.title} />} />
+          <Route path="/play"  render={() => <PlayPage title={this.state.play.title} />} />
+          <Route path="/leaderboards" render={() => <LeaderboardsPage title={this.state.leaderboards.title} />} />
+          <Route path="/rules" render={() => <RulesPage title={this.state.rules.title} />} />
+
+          <Footer/>
+
+        </Container>
+      </Router>
+    )
   }
 }
 

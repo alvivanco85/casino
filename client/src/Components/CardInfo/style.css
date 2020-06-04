@@ -1,0 +1,21 @@
+.a-card-info {
+    text-align: center;
+    margin-top: 10px;
+    min-height: 100px;
+    color: whitesmoke;
+  }
+  
+  .a-card-title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bolder;
+    margin: 0px;
+    color: whitesmoke;
+  }
+  
+  .a-card-sub-title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bolder;
+    margin: 0px;
+  }

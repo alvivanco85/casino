@@ -1,5 +1,90 @@
 body {
   margin: 0;
-  padding: 0;
-  font-family: sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.Navbar {
+    height: 70px;
+    background-color: darkgray;
+    position: fixed;
+  }
+
+  body {
+    font-family: 'Lucida Sans Unicode';
+    background-image: url(./Assets/Images/Poker.jpg);
+    background-size: cover;
+  }
+
+  .a-text{
+    text-align: center;
+    color: white;
+  }
+  
+  button {
+    margin: 0 10px 0 10px;
+  }
+  
+  form {
+    display: flex;
+    justify-content: center;
+  }
+  
+  p {
+    text-align: center;
+  }
+  
+  .buttons {
+    padding-top: 70px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .Bet{
+    border-radius: 10px;
+    background-color: darkgoldenrod;
+  }
+
+  p {
+    padding-top: 5px;
+    font-weight: bolder;
+    color: black;
+  }
+
+  .d-Cards {
+    padding-left: 20px ;
+    padding-right: 20px;
+  }
+  
+  .card, .card-red {
+    height: 200px;
+    width: 150px;
+    background-color: #BFBFBF;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .card-red {
+    color: red;
+  }
+  
+  .cards {
+    margin: 0 auto;
+  }
+  
+  .input-bet {
+    font-weight: bolder;
+    color: black;
+    display: flex;
+    justify-content: center;
+  }
