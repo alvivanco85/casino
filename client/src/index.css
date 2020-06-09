@@ -1,110 +1,128 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  background-image: url(./Assets/Images/Poker.jpg);
+  background-size: cover;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New' monospace;
+}
+
+.p-0{
+  position: relative;
+  min-height: 100vh;
 }
 
 .Navbar {
-    height: 70px;
-    background-color: darkgray;
-    position: fixed;
-  }
+  width: 100% !important;
+  height: 70px;
+  background-color: darkgray;
+}
 
-  body {
-    font-family: 'Lucida Sans Unicode';
-    background-image: url(./Assets/Images/Poker.jpg);
-    background-size: cover;
-  }
+.carousel{
+  padding-bottom: 5em;
+}
 
-  .a-text{
-    text-align: center;
-    color: white;
-  }
+.a-text{
+  text-align: center;
+  color: white;
+}
   
-  button {
-    margin: 0 10px 0 10px;
-  }
+button {
+  margin: 0 10px 0 10px;
+}
   
-  form {
-    display: flex;
-    justify-content: center;
-  }
+form {
+  display: flex;
+  justify-content: center;
+}
   
-  p {
-    text-align: center;
-  }
-  
-  .buttons {
-    padding-top: 70px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-  }
-  .primary {
-    margin-left: 5em;
-    width: 10em;
-    height: 3em;
-  }
+p {
+  text-align: center;
+}
 
-  .danger {
-    margin-left: 5em;
-    width: 10em;
-    height: 3em;
-  }
+.login {
+  margin-top: 8em;
+  padding-bottom: 7em;
+}
 
-  .success {
-    margin-left: 5em;
-    width: 10em;
-    height: 3em;
-  }
+.sign-up {
+  margin-top: 8em;
+  padding-bottom: 7em;
+}
+/*css for PlayPage*/
 
+.playPage {
+   padding-bottom: 5em;
+}
   
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  padding-top: 70px;
+}
+  
+.primary {
+  margin-left: 5em;
+  width: 10em;
+  height: 3em;
+}
 
-  .Bet{
-    border-radius: 10px;
-    background-color: darkgoldenrod;
-  }
+.danger {
+  margin-left: 5em;
+  width: 10em;
+  height: 3em;
+}
 
-  p {
-    padding-top: 5px;
-    font-weight: bolder;
-    color: black;
-  }
+.success {
+  margin-left: 5em;
+  width: 10em;
+  height: 3em;
+}
 
-  .d-Cards {
-    padding-left: 20px ;
-    padding-right: 20px;
-  }
+.Bet{
+  border-radius: 10px;
+  background-color: darkgoldenrod;
+}
+
+p {
+  padding-top: 5px;
+  font-weight: bolder;
+  color: black;
+}
+
+.d-Cards {
+  padding-left: 20px ;
+  padding-right: 20px;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  margin-left: 5em;
+}
+
+.card, .card-red {
+  height: 200px;
+  width: 150px;
+  background-color: #BFBFBF;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
   
-  .card, .card-red {
-    height: 200px;
-    width: 150px;
-    background-color: #BFBFBF;
-    border-radius: 5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+.card-red {
+  color: red;
+}
   
-  .card-red {
-    color: red;
-  }
-  
-  .cards {
-    margin: 0 auto;
-  }
-  
-  .input-bet {
-    font-weight: bolder;
-    color: black;
-    display: flex;
-    justify-content: center;
-  }
+.input-bet {
+  font-weight: bolder;
+  color: black;
+  display: flex;
+  justify-content: center;
+}
