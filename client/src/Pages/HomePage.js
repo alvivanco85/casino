@@ -6,7 +6,7 @@ import Carousel from '../Components/Carousel/Carousel';
 function HomePage(props) {
 
     return (
-       <div> 
+       <div className="carousel"> 
            <Jumbo title={props.title} subTitle={props.subTitle} text={props.text}/>
            <Carousel/>
        </div>

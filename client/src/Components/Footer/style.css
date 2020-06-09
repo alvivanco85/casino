@@ -1,8 +1,9 @@
 footer{
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    background-color: darkgrey;
-    text-align: center;
-  }
+  position: absolute;
+  bottom: 0;
+  width: 100% !important;
+  height: 4em; 
+  background-color: black;
+  color: white;
+  justify-content: center;
+}

@@ -29,14 +29,14 @@ function Register() {
         <div className='input-Lastname'>
         <FormGroup controlId="lastname" bsSize="large">
             <FormLabel>Last Name</FormLabel>
-            <FormControl autoFocus type="text" value={lastname} onChange={e => setLastName(e.target.value)}/>
+            <FormControl type="text" value={lastname} onChange={e => setLastName(e.target.value)}/>
             </FormGroup>
         </div>
 
         <div className='input-Email'>
             <FormGroup controlId="email" bsSize="large">
             <FormLabel>Email</FormLabel>
-            <FormControl autoFocus type="email" value={email} onChange={e => setEmail(e.target.value)}/>
+            <FormControl type="email" value={email} onChange={e => setEmail(e.target.value)}/>
             </FormGroup>
         </div>
         

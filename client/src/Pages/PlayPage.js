@@ -256,7 +256,7 @@ class PlayPage extends React.Component {
     }
 
     return (
-      <div>
+      <div className="playPage">
         <div className="buttons">
           <div><Button className="primary" variant="primary" onClick={() => {this.startNewGame()}}>New Game</Button>{}</div>
           <div><Button className="danger" variant="danger" onClick={() => {this.hit()}}>Hit</Button>{}</div>

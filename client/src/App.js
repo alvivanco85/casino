@@ -55,7 +55,7 @@ class App extends React.Component {
       <Router>
         <Container className="p-0"  fluid={true}>
 
-          <Navbar className="Navbar border-bottom" expand="lg">
+          <Navbar className="Navbar">
             <Navbar.Brand>Welcome!</Navbar.Brand>
 
             <Navbar.Toggle className="border-0" aria-controls="navbar-toggle"/>
@@ -77,11 +77,11 @@ class App extends React.Component {
           <Route path="/play"  render={() => <PlayPage title={this.state.play.title} />} />
           <Route path="/leaderboards" render={() => <LeaderboardsPage title={this.state.leaderboards.title} />} />
           <Route path="/rules" render={() => <RulesPage title={this.state.rules.title} />} />
-
-          <Footer/>
-
+          <Footer/> 
         </Container>
+        
       </Router>
+      
     )
   }
 }
