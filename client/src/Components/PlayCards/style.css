@@ -1,0 +1,76 @@
+/*css for PlayPage*/
+
+.playPage {
+    padding-bottom: 5em;
+ }
+   
+ .buttons {
+   display: flex;
+   flex-wrap: wrap;
+   flex-direction: row;
+   justify-content: center;
+   padding-top: 70px;
+ }
+   
+ .primary {
+   margin-left: 5em;
+   width: 10em;
+   height: 3em;
+ }
+ 
+ .danger {
+   margin-left: 5em;
+   width: 10em;
+   height: 3em;
+ }
+ 
+ .success {
+   margin-left: 5em;
+   width: 10em;
+   height: 3em;
+ }
+ 
+ .Bet{
+   border-radius: 10px;
+   background-color: darkgoldenrod;
+ }
+ 
+ p {
+   padding-top: 5px;
+   font-weight: bolder;
+   color: black;
+ }
+ 
+ .d-Cards {
+   padding-left: 20px ;
+   padding-right: 20px;
+ }
+ 
+ .cards {
+   display: flex;
+   flex-wrap: wrap;
+   flex-direction: row;
+   justify-content: center;
+   margin-left: 5em;
+ }
+ 
+ .card, .card-red {
+   height: 200px;
+   width: 150px;
+   background-color: #BFBFBF;
+   border-radius: 5px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+ }
+   
+ .card-red {
+   color: red;
+ }
+   
+ .input-bet {
+   font-weight: bolder;
+   color: black;
+   display: flex;
+   justify-content: center;
+ }
