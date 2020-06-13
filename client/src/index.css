@@ -13,12 +13,6 @@ code {
   min-height: 100vh;
 }
 
-.Navbar {
-  width: 100% !important;
-  height: 70px;
-  background-color: darkgray;
-}
-
 .carousel{
   padding-bottom: 5em;
 }
