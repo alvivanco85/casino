@@ -8,7 +8,7 @@ import HomePage from './Pages/HomePage';
 import LoginPage from './Pages/LoginPage';
 import SignupPage from './Pages/SignupPage';
 import PlayPage from './Pages/PlayPage';
-import LeaderboardsPage from './Pages/LeaderboardsPage';
+// import LeaderboardsPage from './Pages/LeaderboardsPage';
 import RulesPage from './Pages/RulesPage';
 
 import Navbar from './Components/Navbar/Navbar'
@@ -25,7 +25,7 @@ class App extends React.Component {
         {title: "Home", path: "/"},
         {title: "Login", path: "/login"},
         {title: "Play", path: "/play"},
-        {title: "Leaderboards", path: "/leaderboards"},
+        // {title: "Leaderboards", path: "/leaderboards"},
         {title: "Rules", path: "/rules"}
       ],
       home: {
@@ -41,9 +41,9 @@ class App extends React.Component {
       play: {
         title: "Place Bet to start"
       },
-      leaderboards: {
-        title: "Player Highscores"
-      },
+      // leaderboards: {
+      //   title: "Player Highscores"
+      // },
       rules: {
         title: "How to Play"
       }
@@ -61,7 +61,7 @@ class App extends React.Component {
           <Route path="/login"  render={() => <LoginPage title={this.state.login.title} />} />
           <Route path="/signup"  render={() => <SignupPage title={this.state.signup.title} />} />
           <Route path="/play"  render={() => <PlayPage title={this.state.play.title} />} />
-          <Route path="/leaderboards" render={() => <LeaderboardsPage title={this.state.leaderboards.title} />} />
+          {/* <Route path="/leaderboards" render={() => <LeaderboardsPage title={this.state.leaderboards.title} />} /> */}
           <Route path="/rules" render={() => <RulesPage title={this.state.rules.title} />} />
 
           <Footer/> 
