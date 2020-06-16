@@ -41,15 +41,14 @@ p {
 }
 
 .login {
-  margin-top: 10em;
-  padding-bottom: 5em;
+  margin-top: 15em;
 }
 
 .sign-up {
-  margin-top: 10em;
-  padding-bottom: 5em;
+  margin-top: 15em;
 }
 
 .rules{
+  padding-top: 5em;
   padding-bottom: 7em;
 }
