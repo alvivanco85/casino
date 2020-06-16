@@ -14,6 +14,7 @@ code {
 }
 
 .carousel{
+  padding-top: 5em;
   padding-bottom: 5em;
 }
 
@@ -35,14 +36,18 @@ p {
   text-align: center;
 }
 
+.play {
+  margin-top: 5em;
+}
+
 .login {
-  margin-top: 8em;
-  padding-bottom: 7em;
+  margin-top: 10em;
+  padding-bottom: 5em;
 }
 
 .sign-up {
-  margin-top: 8em;
-  padding-bottom: 7em;
+  margin-top: 10em;
+  padding-bottom: 5em;
 }
 
 .rules{

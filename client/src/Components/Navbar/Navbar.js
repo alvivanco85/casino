@@ -8,7 +8,7 @@ import './style.css';
 function NavBar(props) {
 
     return (
-        <Navbar className="Navbar">
+        <Navbar fixed="top" className="Navbar" bg="light" expand="lg">
             <Navbar.Brand>Welcome!</Navbar.Brand>
             <Navbar.Toggle className="border-0" aria-controls="navbar-toggle"/>
                 <Navbar.Collapse id="navbar-toggle">
@@ -17,7 +17,7 @@ function NavBar(props) {
                         <Link className="nav-link" style={{color:"black"}} to="/play">Play</Link>
                         <Link className="nav-link" style={{color:"black"}} to="/login">Login</Link>
                         <Link className="nav-link" style={{color:"black"}} to="/signup">Sign Up</Link>
-                        <Link className="nav-link" style={{color:"black"}} to="/leaderboards">Leaderboards</Link>
+                        {/* <Link className="nav-link" style={{color:"black"}} to="/leaderboards">Leaderboards</Link> */}
                         <Link className="nav-link" style={{color:"black"}} to="/rules">Rules</Link>
                     </Nav>
                 </Navbar.Collapse>

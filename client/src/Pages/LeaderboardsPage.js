@@ -1,12 +1,12 @@
-import React from 'react';
+// import React from 'react';
 
-function LeaderboardsPage(props) {
+// function LeaderboardsPage(props) {
 
-    return (
-      <div> 
-        Player High Scores!
-      </div>
-    )
-}
+//     return (
+//       <div> 
+//         Player High Scores!
+//       </div>
+//     )
+// }
 
-export default LeaderboardsPage;
+// export default LeaderboardsPage;
