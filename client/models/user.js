@@ -25,14 +25,19 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.STRING,
       allowNull: false
     },
-    createdAt: {
-      type: DataTypes.DATETIME,
+    bio: {
+      type: DataTypes.STRING,
       allowNull: true
     },
-    updatedAt: {
-      type: DataTypes.DATETIME,
+    favorite: {
+      type: DataTypes.TEXT,
+      allowNull: true
+    },
+    history: {
+      type: DataTypes.STRING,
       allowNull: true
     }
+
   }
 );
   // Creating a custom method for our User model. This will check if an unhashed password entered by the user can be compared to the hashed password stored in our database
