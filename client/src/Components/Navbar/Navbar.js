@@ -16,6 +16,7 @@ function NavBar(props) {
     .catch(function (error) {
       console.log(error);
     });
+    console.log(response.data.email);
     return (
         <Navbar fixed="top" className="Navbar" bg="light" expand="lg">
             <Navbar.Brand>Welcome!</Navbar.Brand>
