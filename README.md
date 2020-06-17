@@ -21,7 +21,7 @@ As people who  love the thrill of a gamble,  but don’t like to lose real money
 
 ## Installation
 
-Open up the root directory in your terminal. "Npm i" to install packages, then npm start to start the dev built app.
+Open up the root directory in your terminal. "Npm i" to install packages, then npm start to start the dev build app.
 
 ## Contributors
 * Aldo Vibanco - https://github.com/alvivanco85
