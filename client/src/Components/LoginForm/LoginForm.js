@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Button, FormGroup, FormControl, FormLabel } from "react-bootstrap";
 import "./style.css";
+const axios = require('axios');
 
 function Login() {
   const [username, setUsername] = useState("");
@@ -27,11 +28,7 @@ function Login() {
 
   // loginUser does a post to our "api/login" route and if successful, redirects us the the members page
   function loginUser(email, password) {
-    fetch("/api/login", {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
+    axios.post("/api/login", {
       email: email,
       password: password
     })
