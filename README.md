@@ -1,29 +1,33 @@
-# Create React Express App
+# Casino Black Jack
 
-## About This Boilerplate
+Play To Win  Without the Risk!
 
-This setup allows for a Node/Express/React app which can be easily deployed to Heroku.
+# Table of Contents
+1. [User Story](#User-Story)
+2. [Usage](#Usage)
+3. [Installation](#Installation)
+4. [Contributors](#Contributors)
+5. [Links](#Links)
+6. [Images](#Images)
 
-The front-end React app will auto-reload as it's updated via webpack dev server, and the backend Express app will auto-reload independently with nodemon.
 
-## Starting the app locally
+## User Story
+As people who  love the thrill of a gamble,  but don’t like to lose real money,  we wanted to create a game app that would allow for quick, risk free game sessions, so that we could  enjoy the game worry  and stress free. 
 
-Start by installing front and backend dependencies. While in this directory, run the following command:
+## Usage
 
-```
-npm install
-```
+This app uses React, react-bootstrap, react-router-dom.
 
-This should install node modules within the server and the client folder.
+## Installation
 
-After both installations complete, run the following command in your terminal:
+Open up the root directory in your terminal. "Npm i" to install packages, then npm start to start the dev built app.
 
-```
-npm start
-```
+## Contributors
+* Aldo Vibanco - https://github.com/alvivanco85
 
-Your app should now be running on <http://localhost:3000>. The Express server should intercept any AJAX requests from the client.
+## Links
+* Github Repo - https://github.com/thanhn062/casino
+* Heroku App - http://the-casino.herokuapp.com/
 
-## Deployment (Heroku)
-
-To deploy, simply add and commit your changes, and push to Heroku. As is, the NPM scripts should take care of the rest.
+## Images
+![Black Jack Demo GIF](https://github.com/thanhn062/casino/blob/master/client/src/Assets/Images/Black-Jack.gif)
