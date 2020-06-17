@@ -17,7 +17,7 @@ class Carousel extends React.Component {
                     title: 'Click on the Login in link to login',
                     subTitle: 'and enjoy the game!',
                     imgSrc: Gif,
-                    link: 'http://localhost:3000/login',
+                    link: '/login',
                     selected: false
                 }
             ]

@@ -21,10 +21,19 @@
   },
   "dependencies": {
     "axios": "^0.19.2",
+<<<<<<< HEAD
     "compression": "^1.7.4",
     "express": "^4.16.3",
     "express-session": "^1.17.1",
     "if-env": "^1.0.4",
     "mysql2": "^2.1.0"
+=======
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.16.3",
+    "if-env": "^1.0.4",
+    "jsonwebtoken": "^8.5.1"
+>>>>>>> 6ba34d5db4e4e453076ce1db26c7560c1c1a9e3a
   }
 }
