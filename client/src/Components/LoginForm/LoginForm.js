@@ -12,6 +12,19 @@ function Login() {
 
   function handleSubmit(event) {
     event.preventDefault();
+    var userData = {
+      email: emailInput.val().trim(),
+      password: passwordInput.val().trim()
+    };
+
+    if (!userData.email || !userData.password) {
+      return;
+    }
+
+    // If we have an email and password we run the loginUser function and clear the form
+    loginUser(userData.email, userData.password);
+    emailInput.val("");
+    passwordInput.val("");
   }
 
   return (
@@ -23,20 +36,20 @@ function Login() {
             <FormControl autoFocus type="text" value={username} onChange={e => setUsername(e.target.value)}/>
             </FormGroup>
         </div>
-        
-        <div className='input-Password'>  
+
+        <div className='input-Password'>
             <FormGroup controlId="password" bsSize="large">
             <FormLabel>Password</FormLabel>
             <FormControl value={password} onChange={e => setPassword(e.target.value)} type="password"/>
              </FormGroup>
         </div>
-      
-        <div className='submit-Login-Btn'> 
+
+        <div className='submit-Login-Btn'>
             <Button block bsSize="large" disabled={!validateForm()} type="submit">
                  Login
             </Button>
         </div>
-       
+
       </form>
     </div>
   );
