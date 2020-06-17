@@ -4,14 +4,15 @@ import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import './style.css';
 const axios = require('axios');
-
+var email = "";
   //<Link className="nav-link" style={{color:"black"}} to="/play">Play</Link>
   //<Link className={window.location.pathname === "/login" ? "nav-link" : "nav-link disabled"} style={{color:"black"}} to="/play">Play</Link>
 function NavBar(props) {
   axios.get('/api/user_data')
     .then(function (response) {
       console.log(response.data);
-      console.log(response.data.email);
+      email = response.data.email;
+      console.log(email);
     })
     .catch(function (error) {
       console.log(error);
