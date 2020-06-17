@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Button, FormGroup, FormControl, FormLabel } from "react-bootstrap";
 import "./style.css";
 
+
 function Register() {
   const [name, setName] = useState("");
   const [lastname, setLastName] = useState("");
