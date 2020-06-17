@@ -1,4 +1,3 @@
-require('dotenv').config();
 var compression = require('compression');
 var passport = require("./client/config/passport");
 var compression = require('compression');
