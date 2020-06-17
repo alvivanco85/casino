@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import { Button, FormGroup, FormControl, FormLabel } from "react-bootstrap";
 import "./style.css";
+const axios = require("axios");
 
 function Register() {
-  const [name, setName] = useState(""); 
+  const [name, setName] = useState("");
   const [lastname, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -14,8 +15,43 @@ function Register() {
 
   function handleSubmit(event) {
     event.preventDefault();
-  }
+        var userData = {
+          email: email,
+          password: password,
+          firstName: name,
+          lastName: lastname,
+        };
+        if (!userData.email || !userData.password || !userData.firstName || !userData.lastName) {
+          return;
+        }
+        console.log(userData.email);
+        console.log(userData.password);
+        console.log(userData.firstName);
+        console.log(userData.lastName);
 
+        signUpUser(userData.email, userData.password, userData.firstName, userData.lastName);
+  }
+  function signUpUser(email, password, name, lastname) {
+
+    fetch("/api/signup", {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      email: email,
+      password: password,
+      firstName: name,
+      lastName: lastname,
+    })
+      .then(function (data) {
+        window.location.replace("/members");
+        // If there's an error, handle it by throwing up a bootstrap alert
+      })
+      .catch(handleLoginErr);
+  }
+  function handleLoginErr(err) {
+    console.log(err);
+  }
   return (
     <div className='div'>
       <form className="Register" onSubmit={handleSubmit}>
@@ -39,23 +75,24 @@ function Register() {
             <FormControl type="email" value={email} onChange={e => setEmail(e.target.value)}/>
             </FormGroup>
         </div>
-        
-        <div className='input-Password'>  
+
+        <div className='input-Password'>
             <FormGroup controlId="password" bsSize="large">
             <FormLabel>Password</FormLabel>
             <FormControl value={password} onChange={e => setPassword(e.target.value)} type="password"/>
              </FormGroup>
         </div>
-      
+
         <div className='submit-Create-Btn'>
             <Button block bsSize="large" disabled={!validateForm()} type="submit">
                  Create
             </Button>
         </div>
-       
+
       </form>
+      <script type="text/javascript" src="../../Asset/Javascripts/signup.js"></script>
     </div>
   );
 }
-
 export default Register;
+module.exports = router;

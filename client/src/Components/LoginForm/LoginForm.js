@@ -23,20 +23,20 @@ function Login() {
             <FormControl autoFocus type="email" value={email} onChange={e => setEmail(e.target.value)}/>
             </FormGroup>
         </div>
-        
-        <div className='input-Password'>  
+
+        <div className='input-Password'>
             <FormGroup controlId="password" bsSize="large">
             <FormLabel>Password</FormLabel>
             <FormControl value={password} onChange={e => setPassword(e.target.value)} type="password"/>
              </FormGroup>
         </div>
-      
-        <div className='submit-Login-Btn'> 
+
+        <div className='submit-Login-Btn'>
             <Button block bsSize="large" disabled={!validateForm()} type="submit">
                  Login
             </Button>
         </div>
-       
+       <script type="text/javascript" src="../../Javascripts/login.js"></script>
       </form>
     </div>
   );
