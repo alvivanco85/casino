@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Button, FormGroup, FormControl, FormLabel } from "react-bootstrap";
 import "./style.css";
-const axios = require("axios");
 
 function Register() {
   const [name, setName] = useState("");
@@ -15,43 +14,8 @@ function Register() {
 
   function handleSubmit(event) {
     event.preventDefault();
-        var userData = {
-          email: email,
-          password: password,
-          firstName: name,
-          lastName: lastname,
-        };
-        if (!userData.email || !userData.password || !userData.firstName || !userData.lastName) {
-          return;
-        }
-        console.log(userData.email);
-        console.log(userData.password);
-        console.log(userData.firstName);
-        console.log(userData.lastName);
+  }
 
-        signUpUser(userData.email, userData.password, userData.firstName, userData.lastName);
-  }
-  function signUpUser(email, password, name, lastname) {
-
-    fetch("/api/signup", {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      email: email,
-      password: password,
-      firstName: name,
-      lastName: lastname,
-    })
-      .then(function (data) {
-        window.location.replace("/members");
-        // If there's an error, handle it by throwing up a bootstrap alert
-      })
-      .catch(handleLoginErr);
-  }
-  function handleLoginErr(err) {
-    console.log(err);
-  }
   return (
     <div className='div'>
       <form className="Register" onSubmit={handleSubmit}>
@@ -90,7 +54,6 @@ function Register() {
         </div>
 
       </form>
-      <script type="text/javascript" src="../../Asset/Javascripts/signup.js"></script>
     </div>
   );
 }
