@@ -5,6 +5,8 @@ import Nav from 'react-bootstrap/Nav';
 import './style.css';
 const axios = require('axios');
 
+  //<Link className="nav-link" style={{color:"black"}} to="/play">Play</Link>
+  //<Link className={window.location.pathname === "/login" ? "nav-link" : "nav-link disabled"} style={{color:"black"}} to="/play">Play</Link>
 function NavBar(props) {
   axios.get('/api/user_data')
     .then(function (response) {
@@ -20,10 +22,6 @@ function NavBar(props) {
                 <Navbar.Collapse id="navbar-toggle">
                     <Nav className="ml-auto">
                         <Link className="nav-link" style={{color:"black"}} to="/">Home</Link>
-
-                        //<Link className="nav-link" style={{color:"black"}} to="/play">Play</Link>
-                        //<Link className={window.location.pathname === "/login" ? "nav-link" : "nav-link disabled"} style={{color:"black"}} to="/play">Play</Link>
-
                         <Link className="nav-link" style={{color:"black"}} to="/login">Login</Link>
                         <Link className="nav-link" style={{color:"black"}} to="/signup">Sign Up</Link>
                         {/* <Link className="nav-link" style={{color:"black"}} to="/leaderboards">Leaderboards</Link> */}
