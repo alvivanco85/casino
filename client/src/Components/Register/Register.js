@@ -95,4 +95,3 @@ function Register() {
   );
 }
 export default Register;
-module.exports = router;
