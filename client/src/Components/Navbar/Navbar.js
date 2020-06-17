@@ -10,7 +10,8 @@ const axios = require('axios');
 function NavBar(props) {
   axios.get('/api/user_data')
     .then(function (response) {
-      console.log(response);
+      console.log(response.data);
+      console.log(response.data.email);
     })
     .catch(function (error) {
       console.log(error);
