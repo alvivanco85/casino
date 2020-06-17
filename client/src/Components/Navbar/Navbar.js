@@ -16,7 +16,7 @@ function NavBar(props) {
     .catch(function (error) {
       console.log(error);
     });
-    console.log(response.data.email);
+
     return (
         <Navbar fixed="top" className="Navbar" bg="light" expand="lg">
             <Navbar.Brand>Welcome!</Navbar.Brand>
@@ -24,7 +24,7 @@ function NavBar(props) {
                 <Navbar.Collapse id="navbar-toggle">
                     <Nav className="ml-auto">
                         <Link className="nav-link" style={{color:"black"}} to="/">Home</Link>
-                        <Link className={window.location.pathname ? "nav-link" : "nav-link disabled"} style={{color:"black"}} to="/play">Play</Link>
+                        <Link className={response.data.email ? "nav-link" : "nav-link disabled"} style={{color:"black"}} to="/play">Play</Link>
                         <Link className="nav-link" style={{color:"black"}} to="/login">Login</Link>
                         <Link className="nav-link" style={{color:"black"}} to="/signup">Sign Up</Link>
                         {/* <Link className="nav-link" style={{color:"black"}} to="/leaderboards">Leaderboards</Link> */}
