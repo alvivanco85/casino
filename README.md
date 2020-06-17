@@ -16,8 +16,8 @@ As people who  love the thrill of a gamble,  but don’t like to lose real money
 
 ## Technologies
 
-Front-end: React.Js, React-Bootstrap, React-router-dom, CSS
-Back-end: Bcrypt.js, Express, Express-session, Mysql2, Passport, Passport local, Sequilize. 
+*Front-end: React.Js, React-Bootstrap, React-router-dom, CSS
+*Back-end: Bcrypt.js, Express, Express-session, Mysql2, Passport, Passport local, Sequilize. 
 
 ## Installation
 
