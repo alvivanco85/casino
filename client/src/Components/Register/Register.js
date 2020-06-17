@@ -32,6 +32,27 @@ function Register() {
     signUpUser(userData.email, userData.password, userData.firstName, userData.lastName);
   }
 
+  function signUpUser(email, password, name, lastname) {
+   fetch("/api/signup", {
+     method: 'POST',
+     headers: {
+       'Content-Type': 'application/json'
+     },
+     email: email,
+     password: password,
+     firstName: name,
+     lastName: lastname,
+   })
+     .then(function (data) {
+       window.location.replace("/members");
+       // If there's an error, handle it by throwing up a bootstrap alert
+     })
+     .catch(handleLoginErr);
+ }
+ function handleLoginErr(err) {
+   console.log(err);
+ }
+
   return (
     <div className='div'>
       <form className="Register" onSubmit={handleSubmit}>
