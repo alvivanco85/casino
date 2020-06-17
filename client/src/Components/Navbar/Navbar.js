@@ -2,11 +2,17 @@ import React from 'react';
 import {BrowserRouter as Router, Route, Link} from "react-router-dom";
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
-
 import './style.css';
+const axios = require('axios');
 
 function NavBar(props) {
-
+  axios.get('/api/user_data')
+    .then(function (response) {
+      console.log(response);
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
     return (
         <Navbar fixed="top" className="Navbar" bg="light" expand="lg">
             <Navbar.Brand>Welcome!</Navbar.Brand>
