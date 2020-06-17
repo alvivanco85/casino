@@ -3,7 +3,7 @@ import { Button, FormGroup, FormControl, FormLabel } from "react-bootstrap";
 import "./style.css";
 
 function Register() {
-  const [name, setName] = useState(""); 
+  const [name, setName] = useState("");
   const [lastname, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -14,6 +14,22 @@ function Register() {
 
   function handleSubmit(event) {
     event.preventDefault();
+    var userData = {
+      email: email,
+      password: password,
+      firstName: name,
+      lastName: lastname,
+    };
+    if (!userData.email || !userData.password || !userData.firstName || !userData.lastName) {
+      return;
+    }
+    // Value check
+    console.log(userData.email);
+    console.log(userData.password);
+    console.log(userData.firstName);
+    console.log(userData.lastName);
+
+    signUpUser(userData.email, userData.password, userData.firstName, userData.lastName);
   }
 
   return (
@@ -39,20 +55,20 @@ function Register() {
             <FormControl type="email" value={email} onChange={e => setEmail(e.target.value)}/>
             </FormGroup>
         </div>
-        
-        <div className='input-Password'>  
+
+        <div className='input-Password'>
             <FormGroup controlId="password" bsSize="large">
             <FormLabel>Password</FormLabel>
             <FormControl value={password} onChange={e => setPassword(e.target.value)} type="password"/>
              </FormGroup>
         </div>
-      
+
         <div className='submit-Create-Btn'>
             <Button block bsSize="large" disabled={!validateForm()} type="submit">
                  Create
             </Button>
         </div>
-       
+
       </form>
     </div>
   );
