@@ -41,7 +41,7 @@ function Register() {
      lastName: lastname,
    })
      .then(function (data) {
-       window.location.replace("/members");
+       window.location.replace("/play");
        // If there's an error, handle it by throwing up a bootstrap alert
      })
      .catch(handleLoginErr);
