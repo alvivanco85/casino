@@ -4,7 +4,7 @@ Play To Win  Without the Risk!
 
 # Table of Contents
 1. [User Story](#User-Story)
-2. [Usage](#Usage)
+2. [Technologies](#Technologies)
 3. [Installation](#Installation)
 4. [Contributors](#Contributors)
 5. [Links](#Links)
@@ -14,9 +14,10 @@ Play To Win  Without the Risk!
 ## User Story
 As people who  love the thrill of a gamble,  but don’t like to lose real money,  we wanted to create a game app that would allow for quick, risk free game sessions, so that we could  enjoy the game worry  and stress free. 
 
-## Usage
+## Technologies
 
-This app uses React, react-bootstrap, react-router-dom.
+Front-end: React.Js, React-Bootstrap, React-router-dom, CSS
+Back-end: Bcrypt.js, Express, Express-session, Mysql2, Passport, Passport local, Sequilize. 
 
 ## Installation
 
