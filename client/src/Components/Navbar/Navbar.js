@@ -16,8 +16,8 @@ function NavBar(props) {
     .catch(function (error) {
       console.log(error);
     });
+    console.log(response.data.email);
     return (
-        console.log(response.data.email);
         <Navbar fixed="top" className="Navbar" bg="light" expand="lg">
             <Navbar.Brand>Welcome!</Navbar.Brand>
             <Navbar.Toggle className="border-0" aria-controls="navbar-toggle"/>
