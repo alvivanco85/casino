@@ -5,7 +5,7 @@ const axios = require('axios');
 axios.get('/api/user_data')
   .then(function (response) {
     console.log(response.data);
-    email = response.data.email;
+    var email = response.data.email;
     console.log(email);
     if (email)
       window.location.replace("/play");
