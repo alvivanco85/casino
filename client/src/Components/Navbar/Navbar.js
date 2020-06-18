@@ -25,8 +25,7 @@ function NavBar(props) {
                 <Navbar.Collapse id="navbar-toggle">
                     <Nav className="ml-auto">
                         <Link className="nav-link" style={{color:"black"}} to="/">Home</Link>
-                        <Link className={email !== "undefined" ? "nav-link show" : "nav-link hide"} style={{color:"black"}} to="/play">Play</Link>
-                        <Link className="nav-link" style={{color:"black"}} to="/login">Login</Link>
+                        <Link className="nav-link" style={{color:"black"}} to={email ? "/play" : "/login"}>{email ? "Play" : "Login"}</Link>
                         <Link className="nav-link" style={{color:"black"}} to="/signup">Sign Up</Link>
                         {/* <Link className="nav-link" style={{color:"black"}} to="/leaderboards">Leaderboards</Link> */}
                         <Link className="nav-link" style={{color:"black"}} to="/rules">Rules</Link>
