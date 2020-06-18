@@ -2,17 +2,7 @@ import React, { useState } from "react";
 import { Button, FormGroup, FormControl, FormLabel } from "react-bootstrap";
 import "./style.css";
 const axios = require('axios');
-axios.get('/api/user_data')
-  .then(function (response) {
-    console.log(response.data);
-    var email = response.data.email;
-    console.log(email);
-    if (email)
-      window.location.replace("/play");
-  })
-  .catch(function (error) {
-    console.log(error);
-  });
+
 
 function Login() {
   const [username, setUsername] = useState("");
