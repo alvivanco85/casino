@@ -1,0 +1,46 @@
+.div{
+    background-color: rgb(33, 75, 62);
+    border: rgb(0, 0, 0) 1em !important;
+    border-radius: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 10px;
+    width: 420px;
+    height: 420px;
+}
+
+.Login {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px;
+    height: 400px;
+    overflow: auto;
+    background-color: snow;
+    border: rgb(0, 0, 0);
+    border-radius: 5px;
+    font-weight: bolder;
+    color: rgb(0, 0, 0);
+}
+
+.input-Username {
+    margin-left: auto;
+    margin-right: auto;
+    width: 20em;
+    height: 5em;
+}
+
+.input-Password {
+    margin-left: auto;
+    margin-right: auto;
+    width: 20em;
+    height: 5em;
+}
+
+.submit-Login-Btn {
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 1em;
+    width: 15em;
+}
