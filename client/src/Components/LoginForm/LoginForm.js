@@ -2,7 +2,18 @@ import React, { useState } from "react";
 import { Button, FormGroup, FormControl, FormLabel } from "react-bootstrap";
 import "./style.css";
 const axios = require('axios');
-
+// check if the player ius already logged in
+axios.get('/api/user_data')
+  .then(function (response) {
+    console.log(response.data);
+    email = response.data.email;
+    console.log(email);
+    if (email)
+      window.location.replace("/play");
+  })
+  .catch(function (error) {
+    console.log(error);
+  });
 
 function Login() {
   const [username, setUsername] = useState("");
