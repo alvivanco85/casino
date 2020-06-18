@@ -1,6 +1,18 @@
 import React, { useState } from "react";
 import { Button, FormGroup, FormControl, FormLabel } from "react-bootstrap";
 import "./style.css";
+const axios = require('axios');
+axios.get('/api/user_data')
+  .then(function (response) {
+    console.log(response.data);
+    email = response.data.email;
+    console.log(email);
+    if (email)
+      window.location.replace("/play");
+  })
+  .catch(function (error) {
+    console.log(error);
+  });
 
 function Login() {
   const [username, setUsername] = useState("");
@@ -27,16 +39,12 @@ function Login() {
 
   // loginUser does a post to our "api/login" route and if successful, redirects us the the members page
   function loginUser(email, password) {
-    fetch("/api/login", {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
+    axios.post("/api/login", {
       email: email,
       password: password
     })
       .then(function() {
-        window.location.replace("/members");
+        window.location.replace("/play");
         // If there's an error, log the error
       })
       .catch(function(err) {
